@@ -30,14 +30,14 @@ ALLOWED_HOSTS = []  # 可連進網站的IP
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [  # 有自己寫新功能要加到這
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # 有自己寫新功能要加到這
+    "user.apps.UserConfig",
 ]
 
 MIDDLEWARE = [
@@ -110,7 +110,7 @@ TIME_ZONE = "Asia/Taipei"
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False  # False時間才不會錯
 
 
 # Static files (CSS, JavaScript, Images)
